@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <script>
+
+            //escopos: global, funções, bloco
+
+            var serie = 'Breaking Bad'
+
+            console.log('global: ', serie)
+
+            function escopoFuncao() {
+                
+                if(true) {
+                    var serie2 = 'Better call Saul'
+                    console.log('bloco in funcao: ', serie2)
+                }
+                
+                console.log('funcao: ', serie2)
+            }
+
+            escopoFuncao()
+
+            if(true) {
+                console.log('bloco: ', serie)
+            }
+
+        </script>
+    </body>
+</html>

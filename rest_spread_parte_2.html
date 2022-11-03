@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <script>
+            
+            //contexto rest -> utilizado para comprimir/condensar parâmetros em funções/métodos
+
+            function soma(...param) {
+                let resultado = 0
+
+                param.forEach(valor => resultado += valor)
+
+                return resultado
+            }
+
+            let x = soma(7, 11, 23)
+            console.log('resultado: ', x)
+            
+        </script>
+    </body>
+</html>

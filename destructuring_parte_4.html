@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <script>
+        //array
+        
+        let arr = [10,20,30,40]
+        let [a, ...x] = arr //operador rest junto com destructuring assigment em array
+        //console.log(a, x)
+
+        let obj = {
+            a: 50,
+            b: 60,
+            c: 70,
+            d: 80
+        }
+
+        let {b, ...z} = obj //operador rest junto com destructuring assigment em objeto
+        console.log(b, z)
+
+        </script>
+    </body>
+</html>

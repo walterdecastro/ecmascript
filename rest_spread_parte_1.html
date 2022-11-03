@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <script>
+            
+            //contexto spread -> utilizado para expandir
+
+            //string
+            let tituloArtigo = 'Como utilizar o operador rest/spread'
+
+            console.log(tituloArtigo)
+            console.log(...tituloArtigo)
+
+            //string para array
+            console.log([...tituloArtigo])
+            //string para objeto
+            console.log({...tituloArtigo})
+            console.log('--------------------------------------------------------------------------')
+
+            //array
+            let listaCursos1 = ['NodeJS e MongoDB', 'Angular']
+            let listaCursos2 = ['Solid', 'Laravel']
+            let listaCompletaCursos = ['Web Completo', 'Banco de Dados', ...listaCursos1, ...listaCursos2]
+
+            console.log(listaCompletaCursos)
+
+            //objeto
+            let pessoa = {nome: 'John Lennon', idade: 27}
+            let cadastroCompleto = {...pessoa, endereço: 'Rua Abbey Road', cidade: 'Liverpool'}
+
+            console.log(cadastroCompleto)
+        </script>
+    </body>
+</html>

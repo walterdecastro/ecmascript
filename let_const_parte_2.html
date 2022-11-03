@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <script>
+
+            //escopos: global, funções, bloco
+
+            function escopoFuncao() {
+                if(true) {
+                    let serie2 = 'CSI: Las Vegas' 
+                }
+
+                console.log(serie2)
+            }
+
+            if(true) {
+                var serie = 'Friends'
+                let serie3 = 'Breaking Bad'
+            }
+
+            console.log(serie)
+            
+
+            escopoFuncao()
+           
+
+        </script>
+    </body>
+</html>

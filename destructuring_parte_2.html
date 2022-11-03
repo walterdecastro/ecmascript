@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <script>
+            
+           //destructuring assigment no contexto de objetos
+
+           let produto = {
+            descricao: 'Notebook',
+            preco: 2500,
+            detalhes: {
+                fabricante: 'ABC',
+                modelo: 'xyz'
+            }
+        }
+
+        //let { descricao, preco} = produto
+        //console.log(descricao, preco)
+        
+        //nomear variaveis com outros nomes
+        //let { descricao: d, preco: p} = produto
+        
+        //definir valores default
+        let { descricao: d, preco: p = 0, desconto = 5} = produto
+        console.log(d, p, desconto)
+        </script>
+    </body>
+</html>
