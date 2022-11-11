@@ -3,7 +3,42 @@
         <script>
             
             let promessa = new Promise((resolve, reject) => {
+                /*try {
 
+                } catch(e) {
+
+                }*/
+
+                //requisição http para recuperar uma relação de usuários
+                setTimeout(() => {
+
+
+                    //requisição foi realizada de algum modo
+                    let resposta_da_requisicao = {}
+
+
+                    //erro na requisição
+                    if(false) {
+
+                        resposta_da_requisicao = {
+                            codigo: 1050,
+                            erro: 'Falha de autorização'
+                        }
+
+                        reject(resposta_da_requisicao)
+                    }
+
+                    resposta_da_requisicao = {
+                        0: { id: 1, nome: 'John'},
+                        1: { id: 2, nome: 'Paul'},
+                        2: { id: 3, nome: 'George'}
+                    }
+
+                    resolve(resposta_da_requisicao)
+                }, 4000)
+
+            }).then(dados => {
+                console.log('Operação sequencial: ', dados)
             })
         </script>
     </body>

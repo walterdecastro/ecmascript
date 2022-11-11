@@ -1,0 +1,50 @@
+<html>
+    <body>
+        <script>
+            
+        let beatles = {
+            banda: 'The Beatles',
+            origem: {
+                pais: 'Inglaterra',
+                cidade: 'Liverpool',
+                genero: 'Rock'
+            },
+            integrantes: [ 
+                {nome: 'John Lennon'},
+                {nome: 'Paul McCartney'},
+                {nome: 'George Harrisson'},
+                {nome: 'Ringo Starr'},
+            ],
+        } 
+
+        //console.log(Object.getOwnPropertyDescriptors(beatles))
+
+        //Writable false = o valor da propriedade ñ poderá ser modificada, default = true
+        //Object.defineProperty(beatles, 'banda', {
+            //writable: false
+        //})
+
+        //Enumerable false = o valor da propriedade ñ é exibida em laços de repetição
+        //Object.defineProperty(beatles, 'integrantes', {
+            //enumerable: false
+        //})
+
+        //for(let propriedade in beatles) {
+            //console.log(propriedade, beatles[propriedade]);
+        //}
+
+        //Configurable: se false a propriedade não pode ser deletada
+        //e também não poderá mais se modificar, os descritores(exceto writable, enumarable, configurable)
+        console.log(Object.getOwnPropertyDescriptors(beatles))
+        console.log('--------------------------------------------------');
+
+        Object.defineProperty(beatles, 'banda', {
+            configurable: false
+        })
+        console.log(Object.getOwnPropertyDescriptors(beatles))
+        
+        
+        </script>
+
+    </body>
+</html>
